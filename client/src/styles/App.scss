@@ -1,0 +1,145 @@
+.react-root{
+	margin:0px;
+	padding:0px;
+	font-size:18px;
+  display: grid;
+  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-rows: 5% 10% 65% 20%;
+  height: 110vh;
+  @media (max-width: 580px) {
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 6% 5% 67% 22%;
+  }
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(133deg, rgba(65,78,140,1) 0%, rgba(0,205,152,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @media (min-width: 580px) {
+    min-height: 110vh;
+    background-image: url(../background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+  }
+}
+
+a[href] {
+  color: sienna;
+}
+
+.link {
+  font-family: Edensor;
+  color: sienna;
+}
+
+#resize{
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+ }
+
+ button {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+ }
+
+ .window {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-bar {
+  background-color: black;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  color: sienna;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.content {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-size: 16px;
+  overflow:scroll;
+  height: 200px;
+}
+
+#all {
+  height: 200px;
+  overflow:scroll;
+}
+
+.page {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-weight: 400;
+  font-size: 35px;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.col {
+  display: inline-block;
+}
+
+.col-4 {
+  width: 13%;
+  padding-left: 25%;
+}
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.dataTagContainer {
+  display: inline-block;
+  p{
+    overflow: 'hidden';
+    text-overflow: 'ellipsis';
+    margin: 2px;
+    font-size: 12px;
+    @media (max-width: 565px) {
+      font-size: 12px;
+    }
+  }
+}
+
+img {
+  width: 30px;
+}
+
+h2 {
+  @media(max-width:480px) {
+    font-size: 16px;
+  }
+}
+
+p {
+  font-size: 22px;
+  @media (max-width: 565px) {
+    font-size: 16px;
+  }
+}
