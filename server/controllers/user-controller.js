@@ -12,7 +12,6 @@ const getUser = (req, res) => {
 const sendTweet = async (req, res) => {
   const tweet = req.body.tweet;
 
-  // Add try/catch block
   try{
     if (tweet.length == 0) {
       res.status(401).json({ message: "Text field is empty. Please write something to tweet."});
@@ -29,3 +28,8 @@ const sendTweet = async (req, res) => {
     res.status(500).json({ message: "Failed to send tweet." });
   }
 }
+
+module.exports = {
+  getUser,
+  sendTweet
+};

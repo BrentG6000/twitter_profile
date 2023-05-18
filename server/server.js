@@ -1,15 +1,8 @@
 const express = require('express');
 const path = require('path');
-const passport = require('passport');
-const session = require('express-session');
-const twitter = require('twitter-lite');
-const TwitterStrategy = require('passport-twitter').Strategy;
 const routes = require('./routes');
-
 const PORT = process.env.PORT || 3001;
 const environment = process.env.Node_ENV;
-const consumerKey = process.env.CONSUMER_KEY;
-const consumerSecret = process.env.CONSUMER_SECRET;
 
 let user = {};
 let liteArgs = {  
@@ -40,7 +33,7 @@ app.use(routes);
 passport.use(new TwitterStrategy({
   consumerKey: consumerKey,
   consumerSecret: consumerSecret,
-  callbackURL: '/auth/twitter/callback'
+  callbackURL: 'api/auth/twitter/callback'
 },
 function(token, tokenSecret, profile, cb) {
    user = { ...profile }

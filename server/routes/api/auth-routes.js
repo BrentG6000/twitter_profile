@@ -1,8 +1,11 @@
-app.get('/auth/twitter', passport.authenticate('twitter'))
+const router = require("express").Router();
 
-app.get('/auth/twitter/callback', 
-  passport.authenticate('twitter', { failureRedirect: '/login' }),
-  function(req, res) {
-      //res.redirect('http://localhost:3000/Profile')
-      res.redirect('https://brentg123-twitter-project.herokuapp.com/Profile')
-  })
+const {
+  login,
+  callBack
+} = require('../../controllers/auth-controller');
+
+router.route("/auth/twitter").get(login);
+router.route("/auth/twitter/callback").get(callBack);
+
+module.exports = router;
