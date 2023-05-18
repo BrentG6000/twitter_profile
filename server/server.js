@@ -3,6 +3,9 @@ const path = require('path');
 const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
 const environment = process.env.Node_ENV;
+// Need to find this key and secret
+const consumerKey = process.env.CONSUMER_KEY
+const consumerSecret = process.env.CONSUMER_SECRET
 
 let user = {};
 let liteArgs = {  
