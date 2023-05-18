@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import UserProvider from '../contexts/UserProvider'
 import DataTagProvider from '../contexts/DataTagContext'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip } from 'react-tooltip'
 //import '../index.css'
 import '../styles/button.scss'
 import '../styles/App.scss'
@@ -81,7 +81,7 @@ const DataTags = () => {
                                     <p>
                                         { buttonName }   
                                     </p>
-                                    <ReactTooltip place='right' effect='solid'/> 
+                                    <Tooltip place='right' effect='solid'/> 
                                 </div>
                         }
                     </div>

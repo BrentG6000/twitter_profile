@@ -30,4 +30,4 @@ const UserProvider = props => {
 
 UserProvider.context = context
 
-export default UserProvider
+export default UserProvider;

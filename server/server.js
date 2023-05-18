@@ -1,11 +1,16 @@
 const express = require('express');
 const path = require('path');
 const routes = require('./routes');
+const passport = require('passport');
+const TwitterStrategy = require('passport-twitter').Strategy;
+const session = require('express-session');
 const PORT = process.env.PORT || 3001;
 const environment = process.env.Node_ENV;
-// Need to find this key and secret
-const consumerKey = process.env.CONSUMER_KEY
-const consumerSecret = process.env.CONSUMER_SECRET
+require("dotenv").config();
+const consumerKey = process.env.CONSUMER_KEY;
+const consumerSecret = process.env.CONSUMER_SECRET;
+
+console.log(consumerKey);
 
 let user = {};
 let liteArgs = {  
